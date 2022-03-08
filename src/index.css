@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.icon-link {
+  @apply h-6 w-6  text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-200;
+}
+
+a.link {
+  @apply text-sky-800 dark:text-sky-50 hover:underline;
+}
+
+.wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-delay: 0.8s;
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }  /* The following five values can be played with to make the waving more or less extreme */
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }  /* Reset for the last half to pause */
+  100% { transform: rotate(0deg); }
+}
